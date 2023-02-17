@@ -71,8 +71,41 @@ $babylon = new Movie('Babylon', 'Damien Chazelle', 2022, 'Una storia di ambizion
 
 $parasite = new Movie('Parasite', 'Bong Joon Ho', 2019, 'L\'intera famiglia di Ki-taek è disoccupata e molto interessata allo stile di vita della ricca famiglia Park finché non sono coinvolti in un incidente inaspettato.', 96);
 
+?>
 
-// stampo a schermo
-var_dump($babylon);
+<!DOCTYPE html>
+<html lang="en">
 
-var_dump($parasite);
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css' integrity='sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==' crossorigin='anonymous' />
+    <title>Movie OOP</title>
+</head>
+
+<body>
+    <div class="container mt-5 w-50 border">
+        <div class="mb-5">
+            <h3><?= $babylon->getTitle() ?></h3>
+            <ul>
+                <li><?= $babylon->getDirector() ?></li>
+                <li><?= $babylon->getYear() ?></li>
+                <li><?= $babylon->getplot() ?></li>
+                <li><?= $babylon->getScore() ?></li>
+            </ul>
+        </div>
+        <div>
+            <h3><?= $parasite->getTitle() ?></h3>
+            <ul>
+                <li><?= $parasite->getDirector() ?></li>
+                <li><?= $parasite->getYear() ?></li>
+                <li><?= $parasite->getplot() ?></li>
+                <li><?= $parasite->getScore() ?></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
